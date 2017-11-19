@@ -1,0 +1,68 @@
+<hr />
+<section style="width:700px;margin:50px auto;border:padding: 6px">
+
+  <div class="notification-area">
+    <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
+         ng-show="vm.notification.show">
+      {{vm.notification.text}}
+    </div>
+  </div>
+
+<nav class="level">
+  <div class="level-left"></div>
+  <div class="level-right">
+    <p class="level-item">
+      <a class="button is-light" ng-click="vm.back()">Cancel</a>
+    </p>
+    <p class="level-item">
+      <a class="button is-info" ng-click="vm.update()">Save</a>
+    </p>
+  </div>
+</nav>
+  <div class="field">
+    <label class="label">Objective</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.objective"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Key Activity</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.key_activity"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Outputs</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.output"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Performance Standards</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.standard"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Targets</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.target"></textarea>
+    </div>
+  </div>
+
+  <!-- <div class="field">
+    <label class="label">Actual Performance</label>
+    <div class="control">
+      <textarea class="textarea" ng-model="vm.activity.actual_performance"></textarea>
+    </div>
+  </div> -->
+
+  <div class="box is-danger">
+
+  </div>
+
+</section>

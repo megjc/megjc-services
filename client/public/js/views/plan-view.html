@@ -1,0 +1,58 @@
+<div class="tabs is-boxed is-centered" style="margin-top: 24px">
+  <ul>
+    <li class="is-active">
+      <a ng-href="#!/plans/{{vm.plan_id}}/work-plan" style="color:#3273DD">Activities </a></li>
+    <li><a ng-href="#!/plans/{{vm.plan_id}}/work-plan/resource-needs" style="color:#3273DD">Resource Needs</a></li>
+    <li><a>Changes</a></li>
+  </ul>
+</div>
+
+  <!-- <div style="width:600px;height:auto;margin:0 auto">
+    <div class="notification is-info" ng-if="vm.activities.length == 0">
+      There are <strong>{{vm.activities.length}}</strong> activities associated with your work plan.
+      <a ng-href="#!/plans/{{vm.plan_id}}/work-plan/create"><strong>Create Activity</strong></a>
+    </div>
+  </div> -->
+
+<nav class="level">
+  <div class="level-left">
+    <a class="button is-light" ng-click="vm.back()">Back</a>
+  </div>
+  <div class="level-right">
+    <p class="level-item">
+      <a class="button is-info" ng-href="#!/plans/{{vm.plan_id}}/work-plan/create-activity" style="text-decoration:none">New Activity</a>
+    </p>
+  </div>
+</nav>
+
+<table class="table is-fullwidth is-hoverable" ng-show="vm.activities.length > 0">
+  <thead>
+    <tr style="text-transform:uppercase; font-size:14px;">
+      <th>Unit Objective</th>
+      <th>Key Activities</th>
+      <th>Outputs</th>
+      <th>Performance Standards</th>
+      <th>Targets</th>
+      <th>Actual Performance</th>
+      <th>Score/Result</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="activity in vm.activities">
+      <td>{{activity.objective}}</td>
+      <td>{{activity.key_activity}}</td>
+      <td>{{activity.output}}</td>
+      <td>{{activity.standard}}</td>
+      <td>{{activity.target}}</td>
+      <td>{{activity.actual_performance}}</td>
+      <td>{{activity.score }} - {{activity.result_category}} </td>
+      <td><a ng-href="#!/plans/{{activity.appraisal_id}}/work-plan/{{activity.ref_code}}/edit" style="color:#3273DD; text-decoration:none">
+        <span class="icon is-small" style="color:#3273DD">
+            <i class="fa fa-pencil-square-o"></i>
+        </span>
+      </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

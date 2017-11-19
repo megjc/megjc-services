@@ -1,0 +1,77 @@
+<hr />
+<section style="width:700px;margin:0 auto;border:padding: 6px">
+
+  <div class="notification-area">
+    <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
+         ng-show="vm.notification.show">
+      {{vm.notification.text}}
+    </div>
+  </div>
+
+
+  <nav class="level">
+    <div class="level-left"></div>
+    <div class="level-right">
+      <p class="level-item">
+        <a class="button is-light" ng-click="vm.back()">Cancel</a>
+      </p>
+      <p class="level-item">
+        <a class="button is-info" ng-click="vm.save()">Save</a>
+      </p>
+    </div>
+  </nav>
+
+  <div class="columns content">
+    <div class="column">
+      <div class="field">
+        <label class="label">Objective</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.objective"></textarea>
+        </div>
+      </div>
+    <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+      <div class="field">
+        <label class="label">Key Activity</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.key_activity"></textarea>
+        </div>
+      </div>
+    <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <div class="field">
+        <label class="label">Outputs</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.output"></textarea>
+        </div>
+      </div>
+
+    <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <div class="field">
+        <label class="label">Performance Standards</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.standard"></textarea>
+        </div>
+      </div>
+<blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <div class="field">
+        <label class="label">Targets</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.target"></textarea>
+        </div>
+      </div>
+
+  <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <!-- <div class="field">
+        <label class="label">Actual Performance</label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.activity.actual_performance"></textarea>
+        </div>
+      </div> -->
+
+    </div>
+
+  </div>
+</section>

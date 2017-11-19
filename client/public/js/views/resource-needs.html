@@ -1,0 +1,64 @@
+<div class="tabs is-boxed is-centered" style="margin-top: 24px">
+  <ul>
+    <li>
+      <a ng-href="#!/plans/{{vm.plan_id}}/work-plan" style="color:#3273DD">Activities</a></li>
+    <li class="is-active">
+      <a ng-href="#!/plans/{{vm.plan_id}}/work-plan/resource-needs" style="color:#3273DD">
+        Resource Needs
+      </a></li>
+    <li><a>Changes</a></li>
+  </ul>
+</div>
+
+<!-- <div class="tabs is-boxed is-centered" style="margin-top: 24px">
+  <ul>
+    <li ng-class="{'is-active': activetab == 'work-plan'}">
+      <a ng-href="#!/plans/{{vm.plan_id}}/work-plan">Activities</a></li>
+    <li ng-class="{'is-active': activetab == 'resource-needs'}"><a ng-href="#!/plans/{{vm.plan_id}}/work-plan/resource-needs">Resource Needs</a></li>
+    <li ng-class="{'is-active': activetab == 'work-plan-changes'}"><a>Changes</a></li>
+  </u>
+</div> -->
+
+  <nav class="level">
+    <div class="level-left">
+      <a class="button is-light" ng-click="vm.back()">Back</a>
+    </div>
+    <div class="level-right">
+      <p class="level-item">
+      <a class="button is-info" ng-href="#!/plans/{{vm.plan_id}}/work-plan/create-resource">New Resource</a>
+      </p>
+    </div>
+  </nav>
+
+
+<table class="table is-fullwidth is-hoverable" ng-show="vm.resources.length > 0">
+  <thead>
+    <tr style="text-transform:uppercase; font-size:14px;">
+      <th>Key Output</th>
+      <th>Human</th>
+      <th>Physical</th>
+      <th>Training & Development</th>
+      <th>Cost</th>
+      <th>Date Actioned by Manager/Supervisor</th>
+      <th>Date Received by Employee</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="resource in vm.resources">
+      <td>{{resource.key_output}}</td>
+      <td>{{resource.human}}</td>
+      <td>{{resource.physical}}</td>
+      <td>{{resource.training}}</td>
+      <td>{{resource.cost | currency: "$"}}</td>
+      <td>{{resource.action_date | displayHyphen| date: 'EEEE, MMMM dd, yyyy'}}</td>
+      <td>{{resource.receipt_date | displayHyphen |date: 'EEEE, MMMM dd, yyyy'}}</td>
+      <td><span class="icon is-small" style="color:#3273DD">
+          <i class="fa fa-pencil-square-o"></i>
+      </span><a ng-href="#!/plans/{{vm.plan_id}}/work-plan/resource-needs/{{resource.ref_code}}/edit" style="color:#3273DD; text-decoration:none">
+
+        Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

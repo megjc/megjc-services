@@ -1,0 +1,76 @@
+<hr />
+<section style="width:700px;margin:0 auto;border:padding: 6px">
+
+  <div class="notification-area">
+    <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
+         ng-show="vm.notification.show">
+      {{vm.notification.text}}
+    </div>
+  </div>
+
+
+  <nav class="level">
+    <div class="level-left"></div>
+    <div class="level-right">
+      <p class="level-item">
+        <a class="button is-light" ng-click="vm.back()" id="is-none">Cancel</a>
+      </p>
+      <p class="level-item">
+        <a class="button is-info" ng-click="vm.save()" id="is-none">Save</a>
+      </p>
+    </div>
+  </nav>
+
+  <div class="columns">
+    <div class="column content">
+      <div class="field">
+        <label class="label">Key Output</label>
+
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.resource.key_output"></textarea>
+        </div>
+
+      </div>
+      <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+
+      <div class="field">
+        <label class="label">Human</label>
+        <div class="control">
+          <input class="input" ng-model="vm.resource.human"/>
+        </div>
+      </div>
+
+      <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <div class="field">
+        <label class="label">Physical</label>
+        <div class="control">
+          <input class="input" ng-model="vm.resource.physical"/>
+        </div>
+      </div>
+
+      <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <div class="field">
+        <label class="label">Training and Development </label>
+        <div class="control">
+          <textarea class="textarea" ng-model="vm.resource.training"></textarea>
+        </div>
+      </div>
+
+      <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+      <label class="label">Cost</label>
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="e.g. 10000" ng-model="vm.resource.cost">
+        </p>
+      </div>
+
+      <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+
+    </div>
+
+  </div>
+</section>

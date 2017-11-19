@@ -1,0 +1,47 @@
+
+
+<nav class="level">
+  <div class="level-left">
+    <!-- <a class="button is-light" ng-click="vm.back()">Back</a> -->
+  </div>
+  <div class="level-right">
+    <p class="level-item">
+      <a class="button is-info" ng-href="#!/plans/tttttttt/create-plan" style="text-decoration:none">New Workplan</a>
+    </p>
+  </div>
+</nav>
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr style="text-transform:uppercase; font-size:14px;">
+      <!-- <th>
+        #
+      </th> -->
+      <th>Post Title</th>
+      <th>Classification</th>
+      <th>Division/Branch/Unit</th>
+      <th>Appraiser</th>
+      <th>Length of Supervision (months)</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="plan in vm.plans">
+      <!-- <td>
+        <span class="tag is-info">{{$index + 1}}</span>
+      </td> -->
+      <td>Web Developer/Programmer</td>
+      <td>MIT IT/5</td>
+      <td>Information, Technology & Communication</td>
+      <td>Nicholas Bailey, Director (Acting)</td>
+      <td>9</td>
+      <td style="color:#FF3860">Pending Review</td>
+      <td><span class="icon is-small" style="color:#3273DD">
+          <i class="fa fa-external-link-square"></i>
+      </span><a ng-href="#!/plans/{{plan.ref_code}}/work-plan" style="color:#3273DD; text-decoration:none">
+
+        View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
