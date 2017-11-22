@@ -1,0 +1,78 @@
+<nav class="level">
+  <div class="level-left">
+    <!-- <a class="button is-light" ng-click="vm.back()">Back</a> -->
+  </div>
+  <div class="level-right">
+    <p class="level-item">
+    <a class="button is-info" ng-href="#!/plans/{{vm.plan_id}}/work-plan/create-resource">Add/Drop Activity</a>
+    </p>
+  </div>
+</nav>
+
+<div class="tabs is-boxed is-centered"
+     style="margin-top: 24px"
+     ng-include="'js/views/sub-nav/nav.html'">
+</div>
+
+  <!-- <nav class="level">
+    <div class="level-left">
+      <a class="button is-light" ng-click="vm.back()">Back</a>
+    </div>
+    <div class="level-right">
+      <p class="level-item">
+      <a class="button is-info" ng-href="#!/plans/{{vm.plan_id}}/work-plan/create-resource">New Resource</a>
+      </p>
+    </div>
+  </nav> -->
+
+
+<table class="table is-fullwidth is-hoverable">
+  <thead>
+    <tr style="text-transform:uppercase; font-size:14px;">
+      <th>Unit Objective</th>
+      <th>Key Activities</th>
+      <th>Outputs</th>
+      <th>Peformance Standards</th>
+      <th>Targets</th>
+      <!-- <th>Actual Performance</th>
+      <th>Score</th> -->
+      <th>Type</th>
+      <th>Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td>
+      To secure the Ministry's Information Communication Technology assets and ensure optimal operations
+
+    </td>
+    <td>
+      Conduct backup of server system, application databases, home-directory system, network shares, router/switches
+    </td>
+    <td>
+      Backup conducted
+    </td>
+    <td>
+      Backups conducted in accordance with MEGJC backup policy
+    </td>
+    <td>
+      Full backs done once per week. Switch configuration backed up as new changes are applied
+    </td>
+  </tbody>
+  <!-- <tbody>
+    <tr ng-repeat="resource in vm.resources">
+      <td>{{resource.key_output}}</td>
+      <td>{{resource.human}}</td>
+      <td>{{resource.physical}}</td>
+      <td>{{resource.training}}</td>
+      <td>{{resource.cost | currency: "$"}}</td>
+      <td>{{resource.action_date | displayHyphen| date: 'EEEE, MMMM dd, yyyy'}}</td>
+      <td>{{resource.receipt_date | displayHyphen |date: 'EEEE, MMMM dd, yyyy'}}</td>
+      <td><span class="icon is-small" style="color:#3273DD">
+          <i class="fa fa-pencil-square-o"></i>
+      </span><a ng-href="#!/plans/{{vm.plan_id}}/work-plan/resource-needs/{{resource.ref_code}}/edit" style="color:#3273DD; text-decoration:none">
+
+        Edit</a>
+      </td>
+    </tr>
+  </tbody> -->
+</table>
