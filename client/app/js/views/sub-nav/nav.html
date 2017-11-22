@@ -1,0 +1,18 @@
+<ul>
+  <li ng-class="{'is-active': activetab === 'activities'}">
+    <a ng-href="#!/plans/{{vm.plan_id}}/activities"
+       style="color:#3273DD">Activities
+     </a>
+   </li>
+  <li ng-class="{'is-active': activetab === 'resource-needs'}">
+    <a ng-href="#!/plans/{{vm.plan_id}}/resource-needs"
+         style="color:#3273DD">Resource Needs
+    </a>
+  </li>
+  <li ng-class="{'is-active': activetab === 'changes'}">
+    <a ng-href="#!/plans/{{vm.plan_id}}/changes" style="color:#3273DD">Changes</a>
+  </li>
+  <li ng-class="{'is-active': activetab === 'reviews'}">
+    <a ng-href="#!/plans/{{vm.plan_id}}/reviews" style="color:#3273DD">Reviews</a>
+  </li>
+</ul>

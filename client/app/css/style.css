@@ -19,6 +19,10 @@ body{
   text-decoration: none;
 }
 
+.link{
+  color: #276CDA;
+}
+
 .my-card{
   height: 100px;
   width: 100px;

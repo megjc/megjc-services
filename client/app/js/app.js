@@ -16,23 +16,23 @@ function config($routeProvider){
     controller: 'Plan as vm',
     title: 'PMAS Workplans',
     templateUrl: 'js/views/list.html'
-  }).when('/plans/:id/work-plan', {
+  }).when('/plans/:id/activities', {
     controller: 'Activity as vm',
     title: 'PMAS Workplans',
-    templateUrl: 'js/views/plan-view.html'
+    templateUrl: 'js/views/activities.html'
   }).when('/plans/:id/work-plan/create-activity', {
     controller: 'CreateActivity as vm',
     title: 'PMAS Workplans',
     templateUrl: 'js/views/create-activity.html'
-  }).when('/plans/:id/work-plan/:ac_id/edit', {
+  }).when('/plans/:id/activities/:ac_id/edit', {
     controller: 'EditActivity as vm',
     title: 'PMAS Workplans',
     templateUrl: 'js/views/edit-activity.html'
-  }).when('/plans/:id/work-plan/resource-needs', {
+  }).when('/plans/:id/resource-needs', {
     controller: 'Resources as vm',
     title: 'PMAS Workplans',
     templateUrl: 'js/views/resource-needs.html'
-  }).when('/plans/:id/work-plan/create-resource', {
+  }).when('/plans/:id/create-resource', {
     controller: 'CreateResource as vm',
     title: 'Create Resource',
     templateUrl: 'js/views/resources-create.html'
@@ -44,6 +44,18 @@ function config($routeProvider){
     controller: 'CreatePlan as vm',
     title: 'Create Work Plan',
     templateUrl: 'js/views/create-plan.html'
+  }).when('/plans/:id/changes', {
+    controller: 'Changes as vm',
+    title: 'Work Plan Changes',
+    templateUrl: 'js/views/changes.html'
+  }).when('/plans/:id/reviews', {
+    controller: 'Review as vm',
+    title: 'Reviews',
+    templateUrl: 'js/views/reviews.html'
+  }).when('/plans/:id/reviews/create', {
+    controller: 'Review as vm',
+    title: 'Reviews',
+    templateUrl: 'js/views/create-review.html'
   }).otherwise({redirectTo: '/plans'})
 }
 
@@ -57,9 +69,7 @@ function getActiveTab( $rootScope, $location ) {
   var path = function() { return $location.path() }
   $rootScope.$watch(path, function(newURL, oldURL){
     var url = newURL.split('/')
-  //  console.log(url)
     if(url.length > 0 ) $rootScope.activetab = url[3]
-    console.log(url)
     console.log($rootScope.activetab)
   })
 }

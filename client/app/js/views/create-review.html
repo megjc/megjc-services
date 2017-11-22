@@ -1,0 +1,55 @@
+
+<section style="width:700px;margin:0 auto;border:padding: 6px">
+  <nav class="level">
+    <div class="level-left"><h1 class="title is-4">Add Comment</h1></div>
+    <div class="level-right">
+      <p class="level-item">
+        <a class="button is-light" ng-click="vm.back()">Cancel</a>
+      </p>
+      <p class="level-item">
+        <a class="button is-info" ng-click="vm.save()">Save</a>
+      </p>
+    </div>
+  </nav>
+<hr />
+
+  <div class="notification-area">
+    <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
+         ng-show="vm.notification.show">
+      {{vm.notification.text}}
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="columns">
+    <div class="column">
+
+
+    <div class="field">
+    <label class="label">Review Type</label>
+    <div class="control">
+      <div class="select">
+      <select>
+        <option>First Review </option>
+        <option>Second Review </option>
+        <option>Third Review </option>
+      </select>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <label class="label">Comment</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Type your comment..."></textarea>
+    </div>
+  </div>
+
+    </div>
+  </div>
+</section>
