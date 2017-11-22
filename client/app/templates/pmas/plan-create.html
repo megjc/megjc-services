@@ -1,0 +1,111 @@
+
+<section style="width:700px;margin:0 auto;border:padding: 6px">
+  <nav class="level">
+    <div class="level-left"><h2 class="title is-4">Create Work Plan</h2></div>
+    <div class="level-right">
+      <p class="level-item">
+        <a class="button is-light" ng-click="vm.back()">Cancel</a>
+      </p>
+      <p class="level-item">
+        <a class="button is-info" ng-click="vm.save()">Save</a>
+      </p>
+    </div>
+  </nav>
+  <hr />
+
+  <div class="notification-area">
+    <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
+         ng-show="vm.notification.show">
+      {{vm.notification.text}}
+    </div>
+  </div>
+
+
+  <div class="columns">
+    <div class="column">
+
+      <!-- <div class="field">
+      <label class="label">Employee Name</label>
+      <div class="control">
+        <input class="input" type="text" value="Tremaine Buchanan" disabled>
+      </div>
+    </div>
+
+    <div class="field">
+    <label class="label">Division/Unit/Section</label>
+    <div class="control">
+      <input class="input" type="text" value="Information Communication & Technology Branch" disabled>
+    </div>
+  </div> -->
+
+    <div class="field">
+    <label class="label">Post Title</label>
+    <div class="control">
+      <div class="select">
+      <select>
+        <option>Web Developer/Programmer </option>
+      </select>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="field">
+  <label class="label">Classification</label>
+  <div class="control">
+    <div class="select">
+    <select>
+      <option>MIT IT/5 </option>
+    </select>
+  </div>
+  </div>
+
+</div>
+
+      <div class="field">
+      <label class="label">Appraisal Period Start</label>
+      <div class="control">
+        <div class="select">
+        <select>
+          <option>2017</option>
+        </select>
+      </div>
+      </div>
+
+    </div>
+
+      <div class="field">
+      <label class="label">Appraisal Period End</label>
+      <div class="control">
+        <div class="select">
+        <select>
+          <option>2018</option>
+        </select>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="field">
+    <label class="label">Name of Appraiser</label>
+    <div class="control">
+      <div class="select">
+      <select>
+        <option>Nicholas Bailey - Director</option>
+        <option>Garnett Clarke - Software Manager</option>
+      </select>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="field">
+  <label class="label">Length of Supervision (in months)</label>
+  <div class="control">
+    <input class="input" type="number" placeholder="e.g. 9">
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
