@@ -18,6 +18,7 @@
         activate();
 
         function activate() {
+          //console.log('edit')
           $http.get('http://localhost:8003/appraisals/' + $routeParams.id + '/activities/' + $routeParams.ac_id)
                .then(function(res){
                  vm.activity = res.data
