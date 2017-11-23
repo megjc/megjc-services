@@ -1,16 +1,18 @@
-<hr />
+
 <section style="width:700px;margin:0 auto;border:padding: 6px">
 
-  <div class="notification-area">
+  <!-- <div class="notification-area"> -->
     <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
          ng-show="vm.notification.show">
       {{vm.notification.text}}
     </div>
-  </div>
+  <!-- </div> -->
 
 
   <nav class="level">
-    <div class="level-left"></div>
+    <div class="level-left">
+      <h1 class="title is-5">Add Resource</h1>
+    </div>
     <div class="level-right">
       <p class="level-item">
         <a class="button is-light" ng-click="vm.back()" id="is-none">Cancel</a>
@@ -20,7 +22,7 @@
       </p>
     </div>
   </nav>
-
+<hr />
   <div class="columns">
     <div class="column content">
       <div class="field">

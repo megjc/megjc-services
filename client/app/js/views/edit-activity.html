@@ -1,24 +1,28 @@
-<hr />
-<section style="width:700px;margin:50px auto;border:padding: 6px">
 
-  <div class="notification-area">
+<section style="width:700px;margin:50px auto;border:padding: 6px">
+  <!-- <div class="notification-area"> -->
     <div ng-class="{'notification is-primary': vm.message.success, 'notification is-danger': !vm.message.success}"
          ng-show="vm.notification.show">
       {{vm.notification.text}}
     </div>
-  </div>
+  <!-- </div> -->
+  <nav class="level">
+    <div class="level-left">
+      <h1 class="title is-5">Edit Activity</h1>
+    </div>
+    <div class="level-right">
+      <p class="level-item">
+        <a class="button is-light" ng-click="vm.back()">Cancel</a>
+      </p>
+      <p class="level-item">
+        <a class="button is-info" ng-click="vm.update()">Save</a>
+      </p>
+    </div>
+  </nav>
+  <hr />
 
-<nav class="level">
-  <div class="level-left"></div>
-  <div class="level-right">
-    <p class="level-item">
-      <a class="button is-light" ng-click="vm.back()">Cancel</a>
-    </p>
-    <p class="level-item">
-      <a class="button is-info" ng-click="vm.update()">Save</a>
-    </p>
-  </div>
-</nav>
+
+
   <div class="field">
     <label class="label">Objective</label>
     <div class="control">
