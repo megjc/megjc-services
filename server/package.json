@@ -1,0 +1,22 @@
+{
+  "name": "services",
+  "version": "1.0.0",
+  "description": "All MEGJC micro services ",
+  "main": "ecosystem.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megjc/megjc-services.git"
+  },
+  "author": "Tremaine Buchanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megjc/megjc-services/issues"
+  },
+  "homepage": "https://github.com/megjc/megjc-services#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  }
+}

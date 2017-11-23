@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const helmet = require('helmet')
 const routes = require('./routes/index')
 const app = express()
+const cors = require('cors')
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'development';
