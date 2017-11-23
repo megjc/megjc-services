@@ -14,6 +14,11 @@ MEGJC's intranet uses a number of open source technologies and projects:
  - ExpressJs
  - MYSQL
 
+### Project Folder Structure
+
+The project contains two folders namely `client` and `server`. The `client` folder manages the user interface of the application
+while the `server` folder contains RESTful services consumed by the front end.
+
 ### Installation
 
 The application's back-end consists of a MYSQL data store interfaced by PHP and the Slim Framework.
