@@ -24,7 +24,7 @@ let client = ldapjs.createClient({
       dn = null
 
 /**
- * Attempts to bound a username and password against the LDAP server.
+ * Attempts to bind a username and password against the LDAP server.
  * @param  {[type]}   args An array of user credentials.
  * @param  {Function} cb   Callback function
  * @return {[type]}        Callback invoked with null if successful, otherwise with error.
@@ -102,7 +102,7 @@ function _index( cb ){
 exports.auth = (username, password, cb)=>{
   //bind the admin user
   _bind([ldap_config.admin, ldap_config.pass],(err)=>{
-    if(err != null) return cb('Unable to authenticate user', null)
+    if(err != null) return cb('Unable to authenticate admin user', null)
     //search ldap for username
     _search(username, (err, dn)=>{
       if(err != null) return cb('no dn found', null)

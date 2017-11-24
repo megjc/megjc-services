@@ -16,6 +16,7 @@ router.post('/users/ldap', function(req, res) {
 
  ldap.auth(username, password, (err, result)=>{
     if(err != null) return res.json(message.BAD_REQUEST)
+    console.log(result)
     return res.json({'success': true, 'token': 'token', 'text': 'Login successful'})
   })
 });
